@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working with javaScript</title>
+
+ <!-- write Internal Script -->
+    <script>
+        function changeBgcolor(){
+            document.bgColor='green';
+        }
+    </script>
+
+<!-- Link External Script file-->
+<script src="script.js"></script>
+</head>
+<body>
+    <h1>Welcome to JavaScript Program</h1>
+
+    <!-- inline Script -->
+    <button onclick="document.bgColor='yellow'">BgColor Yellow</button>
+
+    <!-- Internal Script -->
+    <button onclick="changeBgcolor()">BgColor Green</button>
+
+     <!-- External Script -->
+    <button onclick="bgcolorred()">BgColor Red</button>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Printing Methods</title>
+    <!-- Link External js file -->
+     <script src="printingMethods.js"></script>
+</head>
+<body>
+    <!-- 
+    
+    printing Methods: 
+        -document.write();
+        -console.log();
+        -alert();
+        -document.getElementById('').InnerHTML='';
+    -->
+        <h2 id="myheading2"></h2>
+        <button id="sub"></button>
+    <script>
+        /*  -document.write(); */
+        document.write('<h1>'+title+'</h1>');
+        document.write('<p>Course: '+course+'</p>');
+        document.write('<p>Class Time: '+classtime+'</p>');
+        document.write('<p>Course Fee: '+fee+'</p>');
+
+
+        /*  -console.log(); */
+
+        console.log(title);
+        console.log('Course :'+course);
+        console.log('Class Time :'+classtime);
+        console.log('Course Fee: '+fee);
+
+        /* -alert() */
+
+        alert(title);
+        alert(course);
+
+
+        /* document.getElementById().innerHTML='' */
+        document.getElementById('myheading2').innerHTML=headinglevel2;
+        document.getElementById('sub').innerHTML=btn;
+
+    </script>
+</body>
+</html>
