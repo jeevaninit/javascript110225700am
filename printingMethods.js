@@ -1,4 +1,4 @@
-/* var,let,const - to define a variable  */
+/* var, let, const - to define a variable  */
 
 var title='Welcome to Printing Methods';
 var classtime='7 Am';
