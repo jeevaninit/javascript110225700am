@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Working with Variable Scope</h1>
+    <hr>
+    <script>
+
+/* Global Scope */
+        let globalVar='I am from Global Variable..'; //global variable
+
+        function showGlobal(){
+            document.write(globalVar+'<br>');
+        }
+
+        showGlobal();
+        document.write(globalVar);
+
+    
+/* functional Scope  and Block Scope*/
+
+        function myfunction(){
+            let localvar='Hello am from Local Variable...';
+            console.log(localvar);
+            console.log(globalVar);
+
+                    if(true){
+                                let blockvar='Welcome to Block Level Scope...';
+                                const constvar='Block scope with const';
+
+                                console.log(blockvar);
+                                console.log(constvar);
+
+                            }
+
+                            //console.log(blockvar);
+                            //console.log(constvar);
+         }
+
+        myfunction();
+        //console.log(localvar);
+
+
+
+/* Lexical Scope */
+
+function outerfun(){
+    let outerfunvar='Hello am from Outer function variable';
+
+
+        function innerfun(){
+            console.log(outerfunvar);
+        }
+
+    //console.log(outerfunvar);
+    innerfun();
+
+}
+
+
+outerfun();
+
+/* Scope Chain */
+function outer(){
+    let outervar='I am Outer';
+
+    function inner(){
+        let innervar='I am Inner';
+        console.log(innervar);
+        console.log(outervar);
+        console.log(globalVar);
+
+    }
+    inner();
+}
+outer();
+
+
+    </script>
+</body>
+</html>
