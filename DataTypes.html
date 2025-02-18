@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Types</title>
+</head>
+<body>
+    <h1>Data Types in JS</h1>
+    <script>
+        /* 
+        JS Data types are categorized into two types
+            1. Primitive Data Types
+                -String
+                -Number
+                -boolean
+                -undefined
+                -null
+                -bigint
+                -symbol
+
+            2. Non-Primitive Data Types(Object);
+                -Object
+                -Array
+                -function
+                -dates
+                -RegExp
+        
+        */
+
+        //String
+        let myname="Jeevan";
+        let message='Hello hi.. am from String Data Type';
+
+        let info=`Hello,${myname}`;
+
+        console.log(myname);
+        console.log(message);
+        console.log(info);
+
+        //Number (integer and floating-point number)
+        let age=10;
+        let price=1000;
+        let num1=50;
+        let num2=100;
+        let sum=num1+num2;
+
+        console.log(age);
+        console.log(price);
+        console.log(sum);
+
+        //boolean
+        const condition1=true;
+        const condition2=false;
+
+        if(condition1){
+            console.log('Hello am from condition true...');
+
+        } else {
+            console.log('Hello am from condition false...');
+        }
+
+        //undefined
+        let myvar;
+            //myvar='hi....';
+        console.log(myvar);
+
+        //null
+
+     
+        let nullvar='';
+
+        if(price>=10000){
+            nullvar=10;
+            console.log('Discount:'+nullvar);
+        }else {
+           
+            console.log('Discount:'+nullvar);
+        }
+
+//symbol
+        let id=Symbol('anyid');
+
+//BigInt
+        let bigNumber=1111111111111111111111176437643743743238328732n;
+        console.log(bigNumber);
+
+    </script>
+</body>
+</html>
