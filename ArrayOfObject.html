@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array of Object in JS</title>
+</head>
+<body>
+    <h1>Working with Array of Object in JavaScript</h1>
+    <script>
+        let students=[
+            {name:'Deepak',age:13},
+            {name:'Harsha',age:10},
+            {name:'Bhanu',age:20},
+            {name:'Naresh',age:21}
+        ]
+
+        console.log(students[3].name);
+        console.log(students[3].age);
+
+        students.forEach(std=>console.log(std.name));
+        students.forEach(std=>console.log(std.age));
+
+
+    </script>
+</body>
+</html>
