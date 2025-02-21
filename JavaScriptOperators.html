@@ -4,6 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Operators</title>
+    <style>
+
+        table {
+            background-color: #ccc;
+            width: 30%;
+            border: none;
+        }
+        tr th, td {
+            padding: 10px;
+        }
+        table  tr:nth-child(odd){
+            background-color: aliceblue;
+        }
+    </style>
 </head>
 <body>
     <h1>Welcome to JavaScript Operators</h1>
@@ -18,8 +32,90 @@
         -Nullish Coalescing Operators (??) let discount='20'; discount ?? "5%";
 
         -type - typeof,instanceof
-
-    
+ 
     -->
+
+    <table align="right" border="1">
+        <tr>
+            <th colspan="2">Product Details</th>
+        </tr>
+
+        <tr>
+            <td>Product Name</td>
+            <td id="productname"></td>
+        </tr>
+    
+        <tr>
+            <td>Price</td>
+            <td id="price"></td>
+        </tr>
+
+        <tr>
+            <td>Ram</td>
+            <td id="ram"></td>
+        </tr>
+
+        <tr>
+            <td>SSD</td>
+            <td id="ss"></td>
+        </tr>
+
+        <tr>
+            <td>Product Discount</td>
+            <td id="discount"></td>
+        </tr>
+
+        <tr>
+            <td>Other Discount</td>
+            <td id="otherdiscount"></td>
+        </tr>
+
+        <tr>
+            <td>Total Discount</td>
+            <td id="td"></td>
+        </tr>
+
+        <tr>
+            <td>Net Amount</td>
+            <td id="net"></td>
+        </tr>
+    </table>
+
+    <script>
+
+        const productdetails={
+            productname:'Dell54000',
+            price:50000,
+            ram:'16GB',
+            ssd:'500GB'
+        }
+
+        var pn=document.getElementById('productname');
+        var price=document.getElementById('price');
+        var ram=document.getElementById('ram');
+        var ssd=document.getElementById('ss');
+        var discount=document.getElementById('discount');
+        var od=document.getElementById('otherdiscount');
+        var net=document.getElementById('net');
+        var td=document.getElementById('td');
+      
+        pn.innerHTML=productdetails.productname;
+        price.innerHTML=productdetails.price;
+        ram.innerHTML=productdetails.ram;
+        ssd.innerHTML=productdetails.ssd;
+        dc=productdetails.price*15/100;
+        discount.innerHTML=dc;
+
+        otd=productdetails.price*5/100;
+        od.innerHTML=otd;
+
+        total=productdetails.price-(dc+otd);
+        td.innerHTML=dc+otd;
+
+        net.innerHTML=total;
+
+        
+     
+    </script>
 </body>
 </html>
