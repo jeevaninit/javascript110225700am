@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogoinPageValidation</title>
+    <style> 
+        form{
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            margin: auto;
+            gap: 10px;
+        }
+        input,button {
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Working with Login Page Validation</h1>
+    <hr>
+
+    <form action="">
+
+        <label>Username</label>
+        <input type="text" name="" id="username">
+ 
+        <label>Password</label>
+        <input type="text" name="" id="password">
+
+        <button onclick="mylogin()">Submit</button>
+    </form>
+<script>
+    function mylogin(){
+    var un=document.getElementById("username").value;
+    var ps=document.getElementById("password").value;
+
+
+        validateusername='jeevan';
+        validatatepassword='000';
+        
+          if(un==validateusername && ps==validatatepassword){
+           alert('Hello am from validate');
+           window.open('www.google.com','_blank');
+        }else {
+           alert("not Validate...")
+           window.open('www.facebook.com','_blank');
+        }
+    
+
+    }
+
+
+    
+</script>
+</body>
+</html>
