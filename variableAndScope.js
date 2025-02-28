@@ -21,6 +21,7 @@ var institute='Global TieUp';
 
 
 let course='React';
+
 /* 
 
 the variable not possible to redeclare, but its possible to update variable values
@@ -33,6 +34,7 @@ course='JavaScript and React';
 
 
 const coursefee=20000;
+
 
 //not possible to redeclare
 //const coursefee=15000;

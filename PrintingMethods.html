@@ -17,6 +17,7 @@
         -document.getElementById('').InnerHTML='';
     -->
         <h2 id="myheading2"></h2>
+        <p id="para"></p>
         <button id="sub"></button>
     <script>
         /*  -document.write(); */
@@ -24,6 +25,7 @@
         document.write('<p>Course: '+course+'</p>');
         document.write('<p>Class Time: '+classtime+'</p>');
         document.write('<p>Course Fee: '+fee+'</p>');
+        document.write('<h3>Faculty Name: '+faculty+'</h3>')
 
 
         /*  -console.log(); */
@@ -32,16 +34,19 @@
         console.log('Course :'+course);
         console.log('Class Time :'+classtime);
         console.log('Course Fee: '+fee);
+        console.log('Faculty Name:'+faculty);
 
         /* -alert() */
 
         alert(title);
         alert(course);
+        alert('Faculty :'+faculty);
 
 
         /* document.getElementById().innerHTML='' */
         document.getElementById('myheading2').innerHTML=headinglevel2;
         document.getElementById('sub').innerHTML=btn;
+        document.getElementById('para').innerHTML="Faculty Name:"+faculty;
 
     </script>
 </body>

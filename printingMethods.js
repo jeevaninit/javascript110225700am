@@ -6,3 +6,5 @@ var course='Javascript and React';
 var fee='20000';
 var headinglevel2='Printing Method by InnerHTML';
 var btn='Sign In'
+let faculty='Jeevan';
+const info='Hello am from JavaScript Class';
