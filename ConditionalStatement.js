@@ -3,28 +3,31 @@ Condition Statements:
 
 -if - executes code if the condtion is ture 
 -else - executes code if the IF condtion is false
--else if - to write more then one condition / multi conditions 
+-else if - to check more then one condition / multi conditions 
 -switch - executes code based on different cases
 -ternary Operator - shorthand for if-else
 */
 
 
-/* let age=16;
+ let age=26;
+
+ let mystatus=(age>=18) ? "Adult":"Minor";
+ console.log(mystatus);
 
 //if statement
-if(age>18){
+if(age>=18){
     console.log("You are eligible for Vote..");
 }
 //else statement
 else {
     console.log("You are not eligible to Vote..")
-} */
+} 
 
 
-/* 
+
 
 // if - else if and else Statement
-let score=95;
+let score=50;
 
 if(score>=90){
     console.log("Grade: A");
@@ -34,10 +37,10 @@ if(score>=90){
     console.log("Grade: C");
 } else {
     console.log("Grade: D");
-} */
+}
 
 
-/* 
+
     //switch statement
     
     //switch
@@ -47,7 +50,7 @@ if(score>=90){
 
 
 
-    let day=4;
+    let day=7;
     let dayName;
 
     switch(day){
@@ -77,10 +80,8 @@ if(score>=90){
     }
 
     console.log(dayName);
- */
+
 
 
     //Ternary Operator
-    let age=12;
-    let mystatus=(age>=18) ? "Adult":"Minor";
-    console.log(mystatus);
+  /*   let age=12; */
