@@ -30,3 +30,58 @@ var myfruits=new Array();
 for(let i=0;i<myfruits.length;i++){
     document.write('<div class="container"><h4>"'+fruits[i]+'"</h4><img src="'+myfruits[i]+'"/><p>"'+fruitsinfo[i]+'"</p></div>');
 }
+
+//while Loop
+
+/* let j=0;
+
+while(j<fruits.length){
+    console.log("Hello am from While Loop statement "+fruits[j]);
+    j++;
+} */
+
+//do while loop
+
+/* let a=0;
+do {
+   console.log("Hello am from Do While Loop..."+fruits[a]);
+    a++;
+} while(a<2);
+ */
+
+
+
+
+let numbers=[10,20,30,40,50];
+
+let person={
+    myname:"Bhanu",
+    qualification:'BSC',
+    age:19,
+    city:"Hyderabad",
+    phone:'7843874387'
+}
+
+/* for(let b=0;b<numbers.length;b++){
+    console.log(numbers[b]);
+} */
+
+//for ... of
+    for(let num of fruitsinfo){
+        console.log(num);
+    }
+
+    //for..in
+    for( let key in person){
+        console.log(key+" : "+person[key]);
+    }
+
+    //forEach Loop
+
+    fruits.forEach(function(fruit){
+        console.log(fruit);
+    });
+
+    numbers.forEach(function(num){
+        console.log(num+5)
+    });
