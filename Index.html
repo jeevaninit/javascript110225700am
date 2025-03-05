@@ -6,7 +6,9 @@
     <title>Index</title>
     <!-- <script src="ConditionalStatement.js"></script> -->
      <!-- <script src="functions.js"></script> -->
-      <script src="Loops.js"> </script>
+      <!-- <script src="Loops.js"> </script> -->
+      
+      
       <style>
         body {
             display: flex;
@@ -24,6 +26,43 @@
       </style>
 </head>
 <body>
+<!--     <div id="tooltip" style="display: none;position: absolute;top: 50px;left: 30px;background-color: lightcoral;padding: 10px;border-radius: 20px;">Hi am from Tooltip...</div>
+    <button onmouseover="document.getElementById('tooltip').style.display='block'" onmouseout="document.getElementById('tooltip').style.display='none'">OverText Here</button>
+
+    <button onclick='over_dialogbox()'>OverEvent</button> -->
+
+<!--
     
+//keyboard Events
+
+<div>
+        <input type="text" id="textbox1" onkeyup="myfun1()">
+        <span id="message">Welcome to key Board Event Content Here: </span>
+    </div>
+    <script>
+        function myfun1(){
+   
+   var text=document.getElementById('textbox1');
+   var inputvalue=text.value;
+   var msg="This Msg get from Input field"+' : '+inputvalue;
+
+  /*  console.log(msg); */
+   var output=document.getElementById('message');
+   output.innerHTML=msg; 
+}
+       </script> -->
+
+       <!-- Focus Events -->
+        <input type="text" id="input" onfocus="changeColor(this)" onblur="changeColor(this)">
+
+        <script>
+            function changeColor(element){
+                if(document.activeElement===element){
+                    element.style.backgroundColor="lightblue";
+                } else {
+                    element.style.backgroundColor='red';
+                }
+            }
+        </script>
 </body>
 </html>
