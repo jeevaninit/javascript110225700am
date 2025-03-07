@@ -12,6 +12,10 @@
       <style>
         body {
             display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
         }
         .container {
             background: lightpink;
@@ -23,9 +27,19 @@
             width: 200px;
             margin: 20px;
         }
+        .mystyle {
+            display: none;
+        }
+        .popup {
+            width: 600px;
+            height: 600px;
+            background-color: aqua;
+            display: none;
+        }
       </style>
 </head>
 <body>
+    <script src="AddEventlistener.js" defer > </script>
 <!--     <div id="tooltip" style="display: none;position: absolute;top: 50px;left: 30px;background-color: lightcoral;padding: 10px;border-radius: 20px;">Hi am from Tooltip...</div>
     <button onmouseover="document.getElementById('tooltip').style.display='block'" onmouseout="document.getElementById('tooltip').style.display='none'">OverText Here</button>
 
@@ -53,7 +67,7 @@
        </script> -->
 
        <!-- Focus Events -->
-        <input type="text" id="input" onfocus="changeColor(this)" onblur="changeColor(this)">
+<!--         <input type="text" id="input" onfocus="changeColor(this)" onblur="changeColor(this)">
 
         <script>
             function changeColor(element){
@@ -63,6 +77,18 @@
                     element.style.backgroundColor='red';
                 }
             }
-        </script>
+        </script> -->
+
+        <!-- working with AddEventListener -->
+         <h1 id="dchanges">DOM Changes / Modifications </h1>
+         <div>
+         <button id="chc">Change Heading Content</button>
+        </div>
+
+        <div class="popup"></div>
+        
+        <p id="content">Show and Hide the Content</p>
+        <button id="toggle">Show/Hide Content</button>
+       <button id="popup">Popup</button>
 </body>
 </html>
