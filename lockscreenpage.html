@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Lock Page</title>
+    <link href=".//style.css" rel="stylesheet">
+    <style>
+@font-face {
+    font-family:myfont;
+    src: url(fonts/tahoma.ttf);
+}
+body {
+   background-image: url(https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832_1280.jpg);
+    color:rgb(255, 255, 255);
+    font-family: myfont;
+    background-size: 100%;
+}
+div {
+    position: relative;
+    bottom: 0px;
+    left: 0px;
+    font-size: 100px;
+}
+
+#date {
+    font-size: 40px;
+
+}
+div .ampm {
+font-size: 20px;
+}
+article {
+    position: absolute;
+    bottom: 50px;
+    left: 0px;
+}
+        </style>
+</head>
+<body>
+    <article>
+    <div>
+        <span class="hours" id="hour"></span> :
+        <span class="minutes" id="minutes"></span>
+        <span class="ampm" id="ampm"></span>
+    </div>
+
+    <div id="date">
+        <span class="day" id="day"></span>,
+        <span class="month" id="month"></span>,  
+        <span class="date" id="mydate"></span>
+        <span class="year" id="myyear"></span>
+    </div>
+</article>
+
+    <script>
+        const hourel=document.getElementById("hour");
+        const minutesel=document.getElementById("minutes");
+        const ampmel=document.getElementById("ampm");
+
+        const dayel=document.getElementById("day");
+        const monthel=document.getElementById("month");
+        const dateel=document.getElementById("mydate");
+        const yearel=document.getElementById("myyear");
+
+
+        function LockScreen(){
+            let h=new Date().getHours();
+            let m=new Date().getMinutes();
+            let ampm="AM";
+
+            const d = new Date();
+            const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+            const months = ["Jan","Feb","Mar","April","May","June","July","Aug","Sep","Oct","Nov","Dec"]; 
+
+            if(h>12){
+                h=h-12
+                ampm="PM";
+            }
+            //before 10 hour to show 0 
+            h=h<10?"0"+h:h;
+            m=m<10?"0"+m:m;
+
+            // time display purpose
+            hourel.innerHTML=h;
+            minutesel.innerHTML=m;
+            ampmel.innerHTML=ampm;
+
+            // date display purpose
+            let myday=weekday[d.getDay()];
+            let mym=months[d.getMonth()];
+            let myy=new Date().getFullYear();
+            let mynum=new Date().getDate();
+
+
+            dayel.innerHTML=myday;
+            monthel.innerHTML=mym;
+            dateel.innerHTML=mynum;
+            yearel.innerHTML=myy;
+
+
+            setTimeout(()=>{
+                LockScreen();
+            },1000);
+
+        }
+
+            LockScreen();
+    </script>
+</body>
+</html>

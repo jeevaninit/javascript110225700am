@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to display a dialog box which will ask for your favorite drink.</p>
+
+<button onclick="myFunction()">Click</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var text;
+  var favBook = prompt("What's your favorite Book? HTML,CSS,JavaScript", "Enter Book Name");
+  switch(favBook) {
+    case "HTML":
+      text = "you are selected html";
+	  window.open('https://www.html.com');
+      break;
+    case "CSS":
+      text = "you are selected CSS";
+      window.open('https://www.css.com');
+      break;
+    case "JavaScript":
+      text = "you are selected JavaScript";
+      window.open('https://www.javascript.com');
+      break;
+    default:
+      text = "You are Not Selected any Book";
+  }
+  document.getElementById("demo").innerHTML = text;
+}
+</script>
+
+</body>
+</html>
