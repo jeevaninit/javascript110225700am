@@ -1,0 +1,7 @@
+ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: lightseagreen;
+    height: 40px;
+}
