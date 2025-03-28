@@ -1,21 +1,66 @@
 import React from 'react'
 
 const Article01 = () => {
+
+  const heading='RR vs KKR Live Streaming channels: Match, toss time Rajasthan Royals vs Kolkata Knight Riders match live telecast online details';
+  const imgurl='https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1BH2Wy.img?w=768&h=403&m=6&x=183&y=133&s=829&d=130';
+  const paracontent='For viewers in the USA, the match will be available on Willow TV, the official IPL broadcaster. Fans can watch the match live on TV or stream it online via the Willow TV app or website, which provides expert commentary and match highlights.';
+
+
+  const userdetails={
+    name:'Shiva Sai',
+    age:23,
+    photo:'',
+    occupation:'Developer',
+    skills:['JavaScript','React','Angular']
+  }
+
+  const fruits=['Apple','Banana','Orange'];
+
+
+  function printuserdetails(user){
+      return `User Name: ${user.name} and the Age: ${user.age}`;
+  }
+
+  const styles={
+    headinglevel1:{
+      color:'red',
+      backgroundColor:'yellow',
+      fontSize:'30px'
+    },
+    para:{
+      color:'blue',
+      fontSize:'12px',
+      padding:'20px',
+      backgroundColor:'lightgray'
+    },
+    list:{
+      color:'green'
+    }
+  }
+
   return (
     <div>
-        <h3>RR vs KKR Live Streaming channels: Match, toss time Rajasthan Royals vs Kolkata Knight Riders match live telecast online details</h3>
 
-        <img src='https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1BH2Wy.img?w=768&h=403&m=6&x=183&y=133&s=829&d=130' alt='' />
-        <p>
-        For viewers in the USA, the match will be available on Willow TV, the official IPL broadcaster. Fans can watch the match live on TV or stream it online via the Willow TV app or website, which provides expert commentary and match highlights.
+    <h1 style={styles.headinglevel1}>{printuserdetails(userdetails)}</h1>
 
-In the UK, fans can watch the match on Sky Sports. The match will be available through the SkyGo app and Sky Sports website, allowing viewers to watch on smartphones, tablets, or laptops for on-the-go streaming.
+      <h2>Print Fruits</h2>
+      <ol>
+        {fruits.map((fruit,index)=>
+        <li key={index} style={styles.list}>{fruit}</li>
+        )}
+      </ol>
 
-For Australian fans, the match will be available on Foxtel’s TV service. Additionally, Kayo Sports offers online streaming, providing features like live stats and expert commentary to enhance the viewing experience.
+    <h2>User Details</h2>
+    <h3>User Name: {userdetails.name}</h3>
+    <p>Age: {userdetails.age}</p>
+    <p>Occupation: {userdetails.occupation}</p>
+    <p>Skills: {userdetails.skills.map((skill, index)=><li key={index}>{skill}</li>)}</p>
 
-With multiple platforms to choose from, fans worldwide can easily catch the IPL action as Rajasthan Royals and Kolkata Knight Riders go head-to-head on March 26 at 7:30 pm IST.
-        </p>
-
+       <h1>Welcome to Article One</h1>
+       <h3>{heading}</h3>
+      <img src={imgurl} alt=''/>
+      <p style={styles.para}>{paracontent}</p>
 
     </div>
   )
