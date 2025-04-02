@@ -1,7 +1,13 @@
 ul {
     display: flex;
     justify-content: space-evenly;
+    flex-direction: column;
     align-items: center;
+
+}
+ul li {
     background-color: lightseagreen;
-    height: 40px;
+    margin: 5px 0;
+    width: 100%;
+    text-align: center;
 }
