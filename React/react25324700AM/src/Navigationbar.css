@@ -10,4 +10,7 @@ ul li {
     margin: 5px 0;
     width: 100%;
     text-align: center;
+    padding: 20px;
+    width: 500px;
+    list-style-type: none;
 }
