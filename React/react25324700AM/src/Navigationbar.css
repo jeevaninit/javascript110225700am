@@ -1,7 +1,7 @@
 ul {
     display: flex;
     justify-content: space-evenly;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
 
 }
@@ -13,4 +13,5 @@ ul li {
     padding: 20px;
     width: 500px;
     list-style-type: none;
+    cursor: pointer;
 }
