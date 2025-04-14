@@ -9,11 +9,16 @@ import ConditionCheck02 from './ConditionalStatements/ConditionCheck02.jsx'
 import Menunav from './router/menunav.jsx'
 import { BrowserRouter } from 'react-router-dom'
 import Container from './router/Container.jsx'
+import { Provider } from 'react-redux'
+import store from './Redux/Store.jsx'
+import PrintStoreValue from './Redux/PrintStoreValue.jsx'
 
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
+    <Provider store={store}>
+      <PrintStoreValue />
     {/* <App /> */}
  {/*  <StatesAndProps />   */} 
     {/* <StateValues /> */}
@@ -22,6 +27,7 @@ createRoot(document.getElementById('root')).render(
     
     <Menunav />
     <Container />
+    </Provider>
     </BrowserRouter>
   </StrictMode>,
 )
