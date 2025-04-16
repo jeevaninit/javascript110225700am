@@ -12,12 +12,14 @@ import Container from './router/Container.jsx'
 import { Provider } from 'react-redux'
 import store from './Redux/Store.jsx'
 import PrintStoreValue from './Redux/PrintStoreValue.jsx'
+import Counter from './Counter.jsx'
 
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
     <Provider store={store}>
+      <Counter />
       <PrintStoreValue />
     {/* <App /> */}
  {/*  <StatesAndProps />   */} 
