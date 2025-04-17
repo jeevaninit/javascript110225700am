@@ -13,12 +13,17 @@ import { Provider } from 'react-redux'
 import store from './Redux/Store.jsx'
 import PrintStoreValue from './Redux/PrintStoreValue.jsx'
 import Counter from './Counter.jsx'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Bootstrap from '../src/BootstrapAndMaterialUI/Bootstrap.jsx';
+import UseMemo from './Hooks/UseMemo.jsx'
 
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
     <Provider store={store}>
+      <UseMemo />
+      <Bootstrap />
       <Counter />
       <PrintStoreValue />
     {/* <App /> */}

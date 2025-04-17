@@ -16,7 +16,7 @@ const FetchApi = () => {
     <h1>FetchApi</h1>
     <ul>
       {data.map((item)=>(
-        <li key={item.id}>
+        <li>
        
           <h3>{item.name}</h3>
           <p>{item.email}</p>
