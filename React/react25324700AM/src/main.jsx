@@ -16,24 +16,31 @@ import Counter from './Counter.jsx'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Bootstrap from '../src/BootstrapAndMaterialUI/Bootstrap.jsx';
 import UseMemo from './Hooks/UseMemo.jsx'
-
+import UseCallback from './Hooks/UseCallback.jsx'
+import UseRef from '../src/Hooks/UseRef.jsx';
+import UseContext from '../src/Hooks/UseContext.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
     <Provider store={store}>
-      <UseMemo />
+
+      <UseContext />
+
+     {/*  <UseRef /> */}
+      {/* <UseCallback /> */}
+     {/*  <UseMemo />
       <Bootstrap />
-      <Counter />
-      <PrintStoreValue />
+      <Counter /> */}
+    {/*   <PrintStoreValue /> */}
     {/* <App /> */}
  {/*  <StatesAndProps />   */} 
     {/* <StateValues /> */}
     {/* <ConditionCheck01 /> */}
     {/* <ConditionCheck02 /> */}
     
-    <Menunav />
-    <Container />
+{/*     <Menunav />
+    <Container /> */}
     </Provider>
     </BrowserRouter>
   </StrictMode>,
