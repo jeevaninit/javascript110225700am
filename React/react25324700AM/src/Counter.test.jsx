@@ -10,8 +10,6 @@ describe('Counter Component',()=>{
         expect(screen.getByTestId('count')).toHaveTextContent("Count: 0");
     })
 
-
-
     test('increment count',async ()=>{
         render(<Counter />);
         const incrementButton=screen.getByText('Increment');

@@ -19,13 +19,15 @@ import UseMemo from './Hooks/UseMemo.jsx'
 import UseCallback from './Hooks/UseCallback.jsx'
 import UseRef from '../src/Hooks/UseRef.jsx';
 import UseContext from '../src/Hooks/UseContext.jsx';
-
+import FetchApi from '../src/API/FetchApi.jsx';
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
     <Provider store={store}>
 
-      <UseContext />
+      <FetchApi />
+
+   {/*    <UseContext /> */}
 
      {/*  <UseRef /> */}
       {/* <UseCallback /> */}
