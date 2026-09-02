@@ -20,7 +20,81 @@
         showGlobal();
         document.write(globalVar);
 
-    
+/*    ******************  */
+
+//The important part: var ignores blocks
+//Consider this:
+
+if (true) {
+  var name = "John";
+}
+
+console.log(name); // John
+
+/* 
+
+Even though name was declared inside the if block, it is accessible outside the block.
+
+That's because var does not have block scope.
+
+Compare it with let:
+
+*/
+
+if (true) {
+  let name = "John";
+}
+
+console.log(name); // ReferenceError
+
+
+
+
+{
+  let city = "Hyderabad";
+
+  console.log(city); // Hyderabad
+}
+
+console.log(city); // ReferenceError
+
+
+/* The most important example: var vs let
+Look at this loop: */
+
+for (var i = 0; i < 3; i++) {
+  console.log(i);
+}
+
+console.log(i);
+
+/* 0
+1
+2
+3
+
+i is still accessible after the loop because var is not block-scoped.
+ */
+
+ for (let i = 0; i < 3; i++) {
+  console.log(i);
+}
+
+console.log(i);
+
+
+/* The final console.log(i) produces:
+
+ReferenceError
+
+because let i exists only inside the for block.
+
+This is one reason let is generally safer than var.
+
+ */
+
+/* **************************** */
+
 /* functional Scope  and Block Scope*/
 
         function myfunction(){
