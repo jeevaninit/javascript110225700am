@@ -2,7 +2,6 @@
 function:(specific task) reusable block of code, to maintain code in the organization format.
 1. Traditional function
 2. Arrow function
-
 */
 
 //Traditional Function
@@ -13,6 +12,7 @@ function myfun(){
 
 myfun();
 
+//Function with parameters
 function persondetails(name){
     return "Hello "+name+"!...";
 }
@@ -38,6 +38,12 @@ console.log(addvalue(10,5));
 //A shorter syntax using =>
 
     const multiply=(a,b)=>a*b;
+
+    function multiply(a,b){
+        return a*b;
+    }
+
+
     console.log(multiply(20,20));
 
     //arrow function with multilines 

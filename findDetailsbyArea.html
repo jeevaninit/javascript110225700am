@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Details by Area</title>
+</head>
+<body>
+    <h1>Find Details by Area</h1>
+    <p>Welcome to the Find Details by Area page!</p>
+    <button onclick="findDetails()">Find Details</button>
+    <script>
+        function findDetails() {
+            // Implementation for finding details by area
+            const persondetailswitharea = 
+                [
+                    { name: "John Doe", area: "Hyderabad", age: 30, job: "Software Engineer" },
+                    { name: "Jane Smith", area: "Chennai", age: 25, job: "Data Analyst" },
+                    { name: "Alice Johnson", area: "Delhi", age: 35, job: "Project Manager" },
+                    { name: "Bob Brown", area: "Mumbai", age: 40, job: "Sales Executive" }
+                ]
+            
+                    let area = prompt("Enter the area to find details:");
+
+            if (area) {
+                const details = persondetailswitharea.filter(person => person.area.toLowerCase() === area.toLowerCase());
+                if (details.length > 0) {
+                    let result = "Details found:\n";
+                    details.forEach(person => {
+                        result += `Name: ${person.name}, Area: ${person.area}, Age: ${person.age}, Job: ${person.job}\n`;
+                    });
+                    alert(result);
+                } else {
+                    alert("No details found for the specified area.");
+                }
+            } else {
+                alert("Please enter a valid area.");
+            }
+        }
+    </script>
+</body>
+</html>
