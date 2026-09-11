@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        let myname = "John";
+
+        let studentname=["John", "Doe", "Jane", "Smith"];
+        let object = {
+            name: "John",
+            age: 30,
+            city: "New York"
+        };
+
+        let arrayofobject = [
+            { name: "John", age: 30, city: "New York",courses:['java','python','javascript'] },
+            { name: "Jane", age: 25, city: "Los Angeles",courses:['c++','python','java'] },
+            { name: "Smith", age: 35, city: "Chicago",courses:['javascript','python','c++'] }
+        ];
+
+        function myFunction(name, callback) {
+            console.log("Hello " + myname);
+            callback();
+        }
+
+        function myCallback() {
+            console.log("This is a callback function.");
+            console.log("Student names: " + studentname.join(", "));
+            console.log("Object properties:");
+            for (let key in object) {
+                console.log(key + ": " + object[key]);
+            }
+            console.log("Array of objects:");
+            arrayofobject.forEach((obj, index) => {
+                console.log(`Object ${index + 1}:`);
+                for (let key in obj) {
+                    console.log(key + ": " + obj[key]);
+                }
+                if(arrayofobject[2].courses[0]=='javascript'){
+                    console.log("this is right information.");
+                }
+                else{
+                    console.log("this is wrong information.");
+                }
+            });
+        }    
+
+        myFunction(myname, myCallback);
+    </script>
+</body>
+</html>

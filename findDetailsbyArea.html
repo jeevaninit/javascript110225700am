@@ -4,26 +4,128 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Find Details by Area</title>
+    <style>
+        body {
+            font-family: "Segoe UI", sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: #eef3f8;
+            color: #1f2937;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: 0;
+            border-radius: 8px;
+            background: #2563eb;
+            color: white;
+            transition: background 0.2s ease, transform 0.2s ease;
+        }
+        button:hover {
+            background: #1d4ed8;
+            transform: translateY(-1px);
+        }
+        input {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 12px;
+            font-size: 16px;
+            margin: 8px 0 18px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+        }
+        dialog {
+            width: min(90%, 380px);
+            padding: 0;
+            border: 0;
+            border-radius: 12px;
+            box-shadow: 0 20px 50px rgb(15 23 42 / 25%);
+        }
+        dialog::backdrop {
+            background: rgb(15 23 42 / 45%);
+            backdrop-filter: blur(3px);
+        }
+        .dialog-content {
+            padding: 24px;
+        }
+        .dialog-content h2 {
+            margin: 0 0 6px;
+        }
+        .dialog-content p {
+            margin: 0;
+            color: #64748b;
+        }
+        .dialog-actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+        }
+        .secondary-button {
+            background: #e2e8f0;
+            color: #334155;
+        }
+    </style>
 </head>
 <body>
-    <h1>Find Details by Area</h1>
-    <p>Welcome to the Find Details by Area page!</p>
+    <h1>Find Details by Area, Age or Job</h1>
+    <p>Search the directory using any one field.</p>
     <button onclick="findDetails()">Find Details</button>
+    <dialog id="searchDialog">
+        <form method="dialog" class="dialog-content" id="searchForm">
+            <h2>Search details</h2>
+            <p>Enter an area, age or job.</p>
+            <input id="searchInput" type="text" placeholder="e.g. Hyderabad or 35" autofocus>
+            <div class="dialog-actions">
+                <button type="button" class="secondary-button" onclick="closeSearchDialog()">Cancel</button>
+                <button type="submit">Search</button>
+            </div>
+        </form>
+    </dialog>
     <script>
+        const searchDialog = document.getElementById("searchDialog");
+        const searchInput = document.getElementById("searchInput");
+
         function findDetails() {
-            // Implementation for finding details by area
+            searchInput.value = "";
+            searchDialog.showModal();
+            searchInput.focus();
+        }
+
+        function closeSearchDialog() {
+            searchDialog.close();
+        }
+
+        document.getElementById("searchForm").addEventListener("submit", event => {
+            event.preventDefault();
+            const searchValue = searchInput.value;
+            searchDialog.close();
+
             const persondetailswitharea = 
                 [
                     { name: "John Doe", area: "Hyderabad", age: 30, job: "Software Engineer" },
                     { name: "Jane Smith", area: "Chennai", age: 25, job: "Data Analyst" },
                     { name: "Alice Johnson", area: "Delhi", age: 35, job: "Project Manager" },
-                    { name: "Bob Brown", area: "Mumbai", age: 40, job: "Sales Executive" }
+                    { name: "Bob Brown", area: "Mumbai", age: 40, job: "Sales Executive" },
+                    { name: "Charlie Davis", area: "Bangalore", age: 28, job: "UX Designer" },
+                    { name: "Diana Evans", area: "Kolkata", age: 32, job: "Marketing Specialist" },
+                    { name: "Ethan Foster", area: "Pune", age: 29, job: "Business Analyst" },
+                    { name: "Fiona Green", area: "Hyderabad", age: 27, job: "Content Writer" },
+                    { name: "George Harris", area: "Chennai", age: 31, job: "HR Manager" },
+                    { name: "Hannah Irving", area: "Delhi", age: 26, job: "Graphic Designer" }
                 ]
             
-                    let area = prompt("Enter the area to find details:");
-
-            if (area) {
-                const details = persondetailswitharea.filter(person => person.area.toLowerCase() === area.toLowerCase());
+            if (searchValue && searchValue.trim()) {
+                const query = searchValue.trim().toLowerCase();
+                const details = persondetailswitharea.filter(person =>
+                    person.area.toLowerCase() === query ||
+                    String(person.age) === query ||
+                    person.job.toLowerCase() === query
+                );
                 if (details.length > 0) {
                     let result = "Details found:\n";
                     details.forEach(person => {
@@ -31,12 +133,12 @@
                     });
                     alert(result);
                 } else {
-                    alert("No details found for the specified area.");
+                    alert("No details found for the specified area, age or job.");
                 }
             } else {
-                alert("Please enter a valid area.");
+                alert("Please enter an area, age or job.");
             }
-        }
+        });
     </script>
 </body>
 </html>

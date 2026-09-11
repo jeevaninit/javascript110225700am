@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arrayofobject2 =[
+            { name: "laptop", brand: "dell", price: 50000 },
+            { name: "laptop", brand: "hp", price: 40000 },
+            { name: "laptop", brand: "lenovo", price: 45000 }
+        ];
+     function myFunction(name, callback) {
+            console.log("Hello " + name);
+            callback();
+        }
+        myFunction("laptop", () => {
+            console.log("This is a callback function.");
+            console.log("Array of objects:");
+            arrayofobject2.forEach((obj, index) => {
+                console.log(`Object ${index + 1}:`);
+                for (let key in obj) {
+                    console.log(key + ": " + obj[key]);
+                }
+                if(arrayofobject2[0].brand=='dell'){
+                    console.log("this is right information.");
+                }
+                else{
+                    console.log("this is wrong information.");
+                }
+            });
+        });
+
+    </script>
+</body>
+</html>
